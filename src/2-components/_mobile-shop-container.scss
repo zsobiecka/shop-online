@@ -1,0 +1,46 @@
+.mobile-shop-container {
+    margin-bottom: $lg-space-y;
+    .main-characteristic-tabs {
+        margin-top: $xs-space-y;
+        margin-bottom: $sm-space-y;
+    }
+    .detailed-characteristic-drop-downs {
+        margin-top: $lg-space-y;
+        margin-bottom: $xl-space-y;
+    }
+    .mobile-phone {
+        @include mobile-color-square();
+        text-align: center;
+        margin-bottom: $xl-space-y;
+
+        .mobile-phone-image {
+            max-width: $mobile-phone-image-width-md;
+        }
+        .mobile-phone-image-description {
+            text-align: center;
+            span {
+                display: block;
+            }
+            p {
+                color: $paragraph-color;
+                margin: auto .9rem;
+            }
+            ul {
+                padding-inline-start: 0px;
+                margin-bottom: $list-margin-bottom;
+                list-style-type: none;
+            }
+            i {
+                margin: $font-awesome-margin;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width:992px) {
+    .main-characteristic-tabs {
+        margin-top: 0;
+        margin-bottom: $xl-space-y;
+    }
+}

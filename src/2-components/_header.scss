@@ -1,0 +1,29 @@
+.header-bg-img {
+    background: url("img/design-hero-large.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: $lg-space-y;
+    padding-bottom: $lg-space-y;
+    .phones-header {
+        color: $white;
+        text-align: center;
+        img {
+            width: 100%;
+            margin-top: .6rem;
+        }
+    }
+}
+
+@media (min-width: #{$screen-md-min}) {
+    .header-bg-img {
+        padding: $lg-space-y;
+        .phones-header {
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+

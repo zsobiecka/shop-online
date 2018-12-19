@@ -1,0 +1,13 @@
+%button-size {
+    height: 3rem;
+    padding: 0.6rem 1.5rem;
+}
+
+.btn-primary {
+    @include button-bg($primary);
+    @extend %button-size;
+    a {
+        color: $white;
+    }
+}
+ 

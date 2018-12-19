@@ -1,0 +1,24 @@
+// Variables
+@import '0-variables/variables';
+
+// Vendor
+@import 'vendor/bootstrap/bootstrap';
+
+// Global
+@import '1-global/mixins';
+@import '1-global/icons';
+@import '1-global/buttons';
+@import '1-global/fonts';
+@import '1-global/typography';
+@import '1-global/media';
+@import '1-global/responsive-widths';
+
+// Components
+@import '2-components/footer';
+@import '2-components/header';
+@import '2-components/form';
+@import '2-components/navbar';
+@import '2-components/tabs-with-icons.scss';
+@import '2-components/dropdowns-group';
+@import '2-components/mobile-shop-container.scss';
+

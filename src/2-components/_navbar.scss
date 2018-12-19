@@ -1,0 +1,82 @@
+.logo-container {
+    position: relative;
+    border-bottom: .1rem solid $light-grey;
+    background-color: $primary;
+    padding-top: $nav-padding-y;
+    padding-bottom: $nav-padding-y;
+
+    .logo {
+        max-width: 3.6rem;
+        margin-top: .5rem;
+        margin-left: .5rem;
+    }
+    .claim {
+        max-width: 6.3rem;
+        position: absolute;
+        right: 0;
+        top: .5rem;
+    }
+}
+
+.hamburger-menu {
+    background-color: $black;
+    .navbar-toggler {
+        padding: 0;
+        font-size: 1rem;
+        i {
+            color: $white;
+            border: .09rem solid $white;
+            padding: .3rem .6rem;
+            border-radius: .3rem;
+            margin-top: $toggle-margin;
+            margin-bottom: $toggle-margin;
+            background-color: $primary;
+            cursor: pointer;
+        }
+    }
+    
+}
+
+.navbar-top {
+  .nav-item {
+        text-align: center;
+        border-bottom: .003rem solid $white;
+    }
+    .last-item-collapsed-menu {
+        @include nav-links($white, $white);
+        padding-bottom: 1.2rem;
+        text-align: center;
+    }
+    .breadcrumb {
+        background: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    .menu-row {
+        padding-top: $nav-half-padding-y;
+        padding-bottom: $nav-half-padding-y;
+    }
+}
+
+@media (min-width: #{$screen-md-min}) {
+    .logo-container {
+        border-bottom: .1px solid $light-grey;
+        background-color: #ffffff;
+        .logo {
+            max-width: 4.8rem;
+            margin-top: .6rem;
+            margin-bottom: 0rem;
+        }
+        .claim {
+            max-width: 9rem;
+            margin-top: 0rem;
+        }
+    }
+    .navbar-top {
+        .nav-link {
+            @include nav-links($titles, $primary);
+            padding-right: 0;
+            padding-left: 3rem;
+        }
+    }
+}

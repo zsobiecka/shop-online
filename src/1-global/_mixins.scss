@@ -1,0 +1,130 @@
+// Buttons
+@mixin button-bg($primary) {
+    background: $primary;
+    border-style: none;
+    
+    &:hover {
+        background: darken($primary, 5%);
+        transition: all 0.3s ease;
+    }
+    &:active {
+        background: darken($primary, 5%) !important;
+        -webkit-box-shadow: inset 0 1px 4px rgba($primary, .5);
+        -moz-box-shadow: inset 0 1px 4px rgba($primary, .5);
+        box-shadow: inset 0 1px 4px rgba($primary, .5);
+    }
+    &:focus {
+        background: darken($primary, 5%);
+        -webkit-box-shadow: inset 0 1px 4px rgba($primary, .5);
+        -moz-box-shadow: inset 0 1px 4px rgba($primary, .5);
+        box-shadow: inset 0 1px 4px rgba($primary, .5);
+    }
+    &:not(:disabled):not(.disabled):active:focus {
+        background: darken($primary, 5%);
+        -webkit-box-shadow: inset 0 1px 4px rgba($primary, .5);
+        -moz-box-shadow: inset 0 1px 4px rgba($primary, .5);
+        box-shadow: inset 0 1px 4px rgba($primary, .5);
+    }
+}
+
+// Mobile-shop-container
+@mixin mobile-color-square() {
+    @each $phone-color, $color in $phone-color {
+        .#{$color}-square {
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            background-color: $color;
+            display: inline-block;
+            border-radius: .3rem;
+            cursor: pointer;
+            margin: $mobile-squares-margin;
+        }
+    }
+}
+
+// Navbar
+@mixin nav-links($nav-color, $pseudo-color) {
+    color: $nav-color;
+
+    &:hover {
+        color: $pseudo-color;
+        transition: all 0.3s ease;
+    }
+    &:active {
+        color: $pseudo-color;
+    }
+    &:focus {
+        color: $pseudo-color;
+    }
+}
+
+//tabs-with-icons
+@mixin hide-borders {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+@mixin tabs-anchor-link {
+    color: $titles;
+
+    &:hover {
+        color: $primary;
+        transition: all 0.3s ease;
+    }
+    &:active {
+        color: $primary;
+    }
+    &:focus {
+        color: $primary;
+    }
+    &:not(:disabled):not(.disabled):active:focus {   
+        color: $primary;
+    }
+}
+
+@mixin tabs-line-bottom {
+    border-bottom: 1px solid $light-grey;
+
+    &:hover {
+        border-bottom: 2px solid $primary;
+
+        &::after {
+            content: '';
+            width: 100px;
+            height: 10px;
+            background-color: $primary;
+        }
+    }
+    &:focus {
+        border-bottom: 2px solid $primary;
+    }
+    &:not(:disabled):not(.disabled):active:focus {   
+        border-bottom: 2px solid $primary;
+    }
+}
+
+@mixin remove-border {
+    border: $transparent;
+
+    &:hover {
+        border: $transparent;
+    }
+    &:active {
+        border: $transparent;
+    }
+    .active {
+        border: $transparent;
+    }
+    &:focus {
+        border: $transparent;
+    }
+    &:visited {
+        border: $transparent;
+    }
+    &:not(:disabled):not(.disabled):active:focus {   
+        border: $transparent;
+    }
+}
